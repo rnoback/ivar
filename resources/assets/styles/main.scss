@@ -3,6 +3,7 @@
 /** Import everything from autoload */
 @import "./autoload/**/*";
 
+@import "variables/__variables";
 /**
  * Import npm dependencies
  *
@@ -13,12 +14,15 @@
 
 /** Import theme styles */
 @import "common/global";
+@import "mixins/__mixins";
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";
 @import "components/cards";
 @import "components/wp-classes";
 @import "layouts/header";
+@import "components/nav";
+@import "components/hamburger-toggle";
 @import "layouts/sidebar";
 @import "layouts/footer";
 @import "layouts/pages";

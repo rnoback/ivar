@@ -1,12 +1,23 @@
-.banner {
-	background: orange;
-	position: relative;
-	z-index: 20;
-
-	@include media-breakpoint-up(sm) {
-		background: red;
-	}
-}
+// .banner {
+// 	background: orange;
+// 	position: relative;
+// 	z-index: 20;
+//
+//
+// 	@include media-breakpoint-up(md) {
+// 		background: red;
+//
+//
+// 	}
+// }
+//
+// .banner .nav li {
+// 	@extend .nav-item;
+// }
+//
+// .banner .nav a {
+// 	@extend .nav-link;
+// }
 
 .banner .nav li {
 	@extend .nav-item;

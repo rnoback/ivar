@@ -17,7 +17,7 @@ if( $subs->have_posts() ) : while( $subs->have_posts() ) : $subs->the_post();
 	<?php
 	if ( has_post_thumbnail( $_post->ID ) ) {
 	?>
-	    <a href="<?php the_permalink() ?>" title="<?php the_title() ?>">
+	    <a class="card" href="<?php the_permalink() ?>" title="<?php the_title() ?>">
 			<h1><?php the_title() ?></h1>
 			<?php echo get_the_post_thumbnail( $_post->ID, 'bones-thumb-450' ); ?>
 		</a>;
@@ -31,6 +31,13 @@ if( $subs->have_posts() ) : while( $subs->have_posts() ) : $subs->the_post();
 	<!--Child Page Thumbnails End-->
 </div>
 
+<ul>
+	@wpquery( array( 'post_type' => 'post' ) )
+	        <li><a href="{{ the_permalink() }}">{{ the_title() }}</a></li>
+	@wpempty
+	        <li>{{ __( 'Sorry, no posts matched your criteria.' ) }}</li>
+	@wpend
+</ul>
 
 <!-- Stack the columns on mobile by making one full-width and the other half-width -->
 <div class="row">
