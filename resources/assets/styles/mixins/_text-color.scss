@@ -1,0 +1,49 @@
+
+@mixin txt-color-light($classes: ()) {
+
+	//loop thru the classes
+	@each $sClass in $classes
+	{
+		&.txt-light &#{$sClass}
+		{
+			color: $colour-txt-light;
+		}		
+	}
+}
+
+@mixin txt-color-dark($classes: ()) {
+
+	//loop thru the classes
+	@each $sClass in $classes
+	{
+		&.txt-dark &#{$sClass}
+		{
+			color: $colour-txt-dark;
+		}		
+	}
+}
+
+
+@mixin txt-color-light-freedom($classes: ()) {
+
+	//loop thru the classes
+	@each $sClass in $classes
+	{
+		&.txt-light #{$sClass}
+		{
+			color: $colour-txt-light;
+		}		
+	}
+}
+
+@mixin txt-color-dark-freedom($classes: ()) {
+
+	//loop thru the classes
+	@each $sClass in $classes
+	{
+		&.txt-dark #{$sClass}
+		{
+			color: $colour-txt-dark;
+		}		
+	}
+}

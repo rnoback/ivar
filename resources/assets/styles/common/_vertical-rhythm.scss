@@ -1,0 +1,20 @@
+// vertical rhythm
+
+//margin
+@include make-vr-rhythm-classes('vr-margin',			("margin-top", "margin-bottom"));
+@include make-vr-rhythm-classes('vr-margin-top',		("margin-top"));
+@include make-vr-rhythm-classes('vr-margin-bottom',		("margin-bottom"));
+
+//padding
+@include make-vr-rhythm-classes('vr-padding',			("padding-top", "padding-bottom"));
+@include make-vr-rhythm-classes('vr-padding-top',		("padding-top"));
+@include make-vr-rhythm-classes('vr-padding-bottom',	("padding-bottom"));
+
+
+.vr-section {
+	@include vr-rhythm('margin-bottom', 11);
+} 
+
+.vr-section-top {
+	@include vr-rhythm('margin-top', 11);
+}

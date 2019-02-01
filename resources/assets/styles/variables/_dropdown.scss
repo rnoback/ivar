@@ -1,0 +1,36 @@
+/* 
+ * Source: Bootstrap 4.0
+ */
+
+
+// Dropdowns
+//
+// Dropdown menu container and contents.
+
+$dropdown-min-width:                10rem !default;
+$dropdown-padding-y:                .5rem !default;
+$dropdown-spacer:                   .125rem !default;
+$dropdown-bg:                       $color-white !default;
+$dropdown-body-color:               $color-white !default;
+$dropdown-border-color:             rgba($color-gray-6, 0.17) !default;
+$dropdown-border-radius:            $border-radius-base !default;
+$dropdown-border-width:             1px !default;
+$dropdown-divider-bg:               $color-gray-2 !default;
+$dropdown-box-shadow:               0 3px 4px 0 rgba($color-gray-6, 0.65) !default;
+
+$dropdown-link-color:               $color-gray-2 !default;
+$dropdown-link-hover-color:         $color-primary-1 !default;
+$dropdown-link-hover-bg:            $color-gray-1 !default;
+
+$dropdown-link-active-color:        $color-primary-1 !default;
+$dropdown-link-active-bg:           $color-white !default;
+
+$dropdown-link-visited-color:       $color-gray-2 !default;
+$dropdown-link-visited-bg:          $color-white !default;
+
+$dropdown-link-disabled-color:      $color-gray-6 !default;
+
+$dropdown-item-padding-y:           .25rem !default;
+$dropdown-item-padding-x:           1.5rem !default;
+
+$dropdown-header-color:             $color-gray-6 !default;

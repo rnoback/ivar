@@ -1,0 +1,121 @@
+/*
+ * typography
+ *
+ * - make-size-classes
+ * - font-light
+ * - font-regular
+ * - font-semibold
+ * - font-bold
+ * - font-extrabold
+ */
+
+/*
+ * make-size-classes
+ *
+ * Creates the vertical rhythm classes based on $vr-sizes and given classname.
+ *
+ * @include make-size-classes('size','font-size');
+ */
+@mixin make-size-classes($sClassName, $cssProperty)
+{
+  @each $value in map-keys($font-sizes)
+  {
+    #{$sClassName}-#{$value}
+    {
+      #{$cssProperty}: map-get($font-sizes, $value);
+    }
+  }
+}
+
+@mixin can-be-centered() {
+	&.text-centered, .text-centered & {
+		text-align: center;
+	}
+}
+/*
+ * font-light
+ *
+ * @include font-light();
+ */
+ @mixin font-light() {
+	font-weight: $fw-light;
+}
+
+/*
+ * font-regular
+ *
+ * @include font-regular();
+ */
+ @mixin font-regular() {
+	font-weight: $fw-normal;
+}
+
+/*
+ * font-semibold
+ *
+ * @include font-semibold();
+ */
+ @mixin font-semibold() {
+	font-weight: $fw-semibold;
+}
+
+/*
+ * font-bold
+ *
+ * @include font-bold();
+ */
+ @mixin font-bold() {
+	font-weight: $fw-bold;
+}
+
+/*
+ * font-extrabold
+ *
+ * @include font-extrabold();
+ */
+ @mixin font-extrabold() {
+	font-weight: $fw-extrabold;
+}
+
+/*
+ * font-size
+ *
+ * @include font-size(10);
+ * @include font-size('h1');
+ */
+@mixin font-size($size-value: 10) {
+
+	@if type-of($size-value) == string {
+		font-size: map-get($font-sizes, $size-value);
+
+		@include media-breakpoint-up(sm) {
+			font-size: map-get($font-sizes-sm, $size-value);
+		}
+
+		@include media-breakpoint-up(md) {
+			font-size: map-get($font-sizes-md, $size-value);
+		}
+
+		@include media-breakpoint-up(lg) {
+			font-size: map-get($font-sizes-lg, $size-value);
+		}
+
+		@include media-breakpoint-up(xl) {
+			font-size: map-get($font-sizes-xl, $size-value);
+		}
+	} @else if type-of($size-value) == number {
+		font-size: ($size-value / 10) + rem;
+	} @else {
+		@warn "Make sure that `$size-value` is a number or a string.";
+	}
+}
+
+/*
+ * Hover, focus state
+ */
+@mixin hocus {
+    &:hover,
+    &:focus {
+        @content;
+    }
+}

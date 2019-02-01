@@ -1,0 +1,15 @@
+/*
+ * squircle
+ *
+ * Returns a squircle variation based on the given indicator.
+ *
+ * @include squircle(1);
+ */
+@mixin squircle($indicator)
+{
+	$radius: map-get($squircle-sizes, $indicator);
+	border-top-left-radius: unset;
+	border-top-right-radius: $radius;
+	border-bottom-right-radius: unset;
+	border-bottom-left-radius: $radius;
+}

@@ -1,0 +1,15 @@
+$animSpeedFast: .2s;
+$animSpeed: .5s;
+
+
+// used in headerCTA component
+$easeInOutQuart: transform $animSpeed cubic-bezier(0.77, 0, 0.175, 1);
+$easeOutQuart: transform $animSpeed cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+
+$ctaIconAnimRight: transform $animSpeedFast ease-out;
+$ctaIconAnimRightAmount:.8rem;
+
+$listIconAnimRightAmount:.4rem;
+
+/*$primarySpeed: ;
+$primaryCtaAnim: ;*/

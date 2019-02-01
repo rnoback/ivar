@@ -1,0 +1,309 @@
+@include make-size-classes('size','font-size');
+
+// responsive typography
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 16px;
+	line-height: $line-height;
+	font-family: $font-main;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	font-family: $font-primary-1;
+	color: $color-primary-1;
+	text-align: left;
+	@include can-be-centered();
+
+	&+.subtitle {
+		margin-top: -0.5em;
+	}
+
+	&.text-light {
+		color: $color-white;
+	}
+	&.text-thin {
+		font-weight: $fw-light;
+	}
+}
+
+p,
+.p {
+	font-family: $font-primary-1;
+	color: $color-primary-1;
+	@include can-be-centered();
+	@include vr-rhythm('margin-bottom', 3);
+	font-size: map-get($font-sizes, p);
+	line-height: map-get($line-heights, p);
+	&.text-large {
+		font-size: map-get($font-sizes, plarge);
+		line-height: map-get($line-heights, plarge);
+	}
+	&.text-small {
+		font-size: map-get($font-sizes, psmall);
+		line-height: map-get($line-heights, psmall);
+	}
+	&.text-xsmall {
+		font-size: map-get($font-sizes, pxsmall);
+		line-height: map-get($line-heights, pxsmall);
+	}
+
+	@include media-breakpoint-up(sm) {
+		font-size: map-get($font-sizes-sm, p);
+		line-height: map-get($line-heights-sm, p);
+		&.text-large {
+			font-size: map-get($font-sizes-sm, plarge);
+			line-height: map-get($line-heights-sm, plarge);
+		}
+		&.text-small {
+			font-size: map-get($font-sizes-sm, psmall);
+			line-height: map-get($line-heights-sm, psmall);
+		}
+		&.text-xsmall {
+			font-size: map-get($font-sizes-sm, pxsmall);
+			line-height: map-get($line-heights-sm, pxsmall);
+		}
+	}
+	@include media-breakpoint-up(md) {
+		font-size: map-get($font-sizes-md, p);
+		line-height: map-get($line-heights-md, p);
+		&.text-large {
+			font-size: map-get($font-sizes-md, plarge);
+			line-height: map-get($line-heights-md, plarge);
+		}
+		&.text-small {
+			font-size: map-get($font-sizes-md, psmall);
+			line-height: map-get($line-heights-md, psmall);
+		}
+		&.text-xsmall {
+			font-size: map-get($font-sizes-md, pxsmall);
+			line-height: map-get($line-heights-md, pxsmall);
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		font-size: map-get($font-sizes-lg, p);
+		line-height: map-get($line-heights-lg, p);
+		&.text-large {
+			font-size: map-get($font-sizes-lg, plarge);
+			line-height: map-get($line-heights-lg, plarge);
+		}
+		&.text-small {
+			font-size: map-get($font-sizes-lg, psmall);
+			line-height: map-get($line-heights-lg, psmall);
+		}
+		&.text-xsmall {
+			font-size: map-get($font-sizes-lg, pxsmall);
+			line-height: map-get($line-heights-lg, pxsmall);
+		}
+	}
+	@include media-breakpoint-up(xl) {
+		font-size: map-get($font-sizes-xl, p);
+		line-height: map-get($line-heights-xl, p);
+		&.text-large {
+			font-size: map-get($font-sizes-xl, plarge);
+			line-height: map-get($line-heights-xl, plarge);
+		}
+		&.text-small {
+			font-size: map-get($font-sizes-xl, psmall);
+			line-height: map-get($line-heights-xl, psmall);
+		}
+		&.text-xsmall {
+			font-size: map-get($font-sizes-xl, pxsmall);
+			line-height: map-get($line-heights-xl, pxsmall);
+		}
+	}
+}
+
+h1,
+.h1 {
+	font-size: map-get($font-sizes, h1);
+	line-height: map-get($line-heights, h1);
+	overflow-wrap: break-word;
+	word-break: break-word;
+	@include font-light;
+
+
+	// based on homepage, probably need to revisit
+	@include vr-rhythm('margin-bottom', 6);
+
+	&.homepage {
+		font-size: map-get($font-sizes-sm, homepage);
+		line-height: map-get($line-heights-sm, homepage);
+		font-weight: normal;
+	}
+
+	@include media-breakpoint-up(sm) {
+		font-size: map-get($font-sizes-sm, h1);
+		line-height: map-get($line-heights-sm, h1);
+	}
+	@include media-breakpoint-up(md) {
+		font-size: map-get($font-sizes-md, h1);
+		line-height: map-get($line-heights-md, h1);
+	}
+	@include media-breakpoint-up(lg) {
+		font-size: map-get($font-sizes-lg, h1);
+		line-height: map-get($line-heights-lg, h1);
+		&.homepage {
+			font-size: map-get($font-sizes-lg, homepage);
+			line-height: map-get($line-heights-lg, homepage);
+		}
+	}
+	@include media-breakpoint-up(xl) {
+		font-size: map-get($font-sizes-xl, h1);
+		line-height: map-get($line-heights-xl, h1);
+		&.homepage {
+			font-size: map-get($font-sizes-xl, homepage);
+			line-height: map-get($line-heights-xl, homepage);
+		}
+	}
+}
+
+h2,
+.h2 {
+	font-size: map-get($font-sizes, h2);
+	line-height: map-get($line-heights, h2);
+
+	@include vr-rhythm('margin-bottom', 6);
+
+	@include media-breakpoint-up(sm) {
+		font-size: map-get($font-sizes-sm, h2);
+		line-height: map-get($line-heights-sm, h2);
+	}
+	@include media-breakpoint-up(md) {
+		font-size: map-get($font-sizes-md, h2);
+		line-height: map-get($line-heights-md, h2);
+	}
+
+	@include media-breakpoint-up(lg) {
+		font-size: map-get($font-sizes-lg, h2);
+		line-height: map-get($line-heights-lg, h2);
+	}
+
+	@include media-breakpoint-up(xl) {
+		font-size: map-get($font-sizes-xl, h2);
+		line-height: map-get($line-heights-xl, h2);
+	}
+}
+
+h2.page-sub-heading {
+	@include vr-rhythm('margin-bottom', 7);
+	text-align: center;
+}
+
+
+h3,
+.h3 {
+	font-size: map-get($font-sizes, h3);
+	line-height: map-get($line-heights, h3);
+
+	@include vr-rhythm('margin-bottom', 4);
+
+	@include media-breakpoint-up(lg) {
+		font-size: map-get($font-sizes-lg, h3);
+		line-height: map-get($line-heights-lg, h3);
+	}
+
+	@include media-breakpoint-up(xl) {
+		font-size: map-get($font-sizes-xl, h3);
+		line-height: map-get($line-heights-xl, h3);
+	}
+}
+
+h4,
+.h4 {
+	font-size: map-get($font-sizes, h4);
+	line-height: map-get($line-heights, h4);
+	@include vr-rhythm('margin-bottom', 2);
+
+	@include media-breakpoint-up(lg) {
+		font-size: map-get($font-sizes-lg, h4);
+		line-height: map-get($line-heights-lg, h4);
+	}
+
+	@include media-breakpoint-up(xl) {
+		font-size: map-get($font-sizes-xl, h4);
+		line-height: map-get($line-heights-xl, h4);
+	}
+
+}
+
+h5,
+.h5 {
+	font-size: map-get($font-sizes, h5);
+	line-height: map-get($line-heights, h5);
+	@include vr-rhythm('margin-bottom', 2);
+
+	@include media-breakpoint-up(lg) {
+		font-size: map-get($font-sizes-lg, h5);
+		line-height: map-get($line-heights-lg, h5);
+	}
+
+	@include media-breakpoint-up(xl) {
+		font-size: map-get($font-sizes-xl, h5);
+		line-height: map-get($line-heights-xl, h5);
+	}
+
+}
+
+h6,
+.h6 {
+	font-size: map-get($font-sizes, h6);
+	line-height: map-get($line-heights, h6);
+	@include vr-rhythm('margin-bottom', 3);
+
+	@include media-breakpoint-up(lg) {
+		font-size: map-get($font-sizes-lg, h6);
+		line-height: map-get($line-heights-lg, h6);
+	}
+
+	&:last-child {
+		@include vr-rhythm('margin-bottom', 0);
+	}
+
+	&:only-child {
+		@include vr-rhythm('margin-bottom', 3);
+	}
+}
+
+a {
+	color: $color-primary-2;
+	cursor: pointer;
+	text-decoration: none;
+
+	&:hover {
+		color: $color-primary-1;
+		text-decoration: underline;
+	}
+
+	&:focus {
+		outline: none;
+ 	}
+
+	&.link--light {
+		color: $color-white;
+	}
+}
+
+.pretitle,
+.subtitle {
+	font-size: map-get($font-sizes, pretitle);
+	line-height: map-get($line-heights, pretitle);
+
+	@include media-breakpoint-up(lg) {
+		font-size: map-get($font-sizes-lg, pretitle);
+		line-height: map-get($line-heights-lg, pretitle);
+	}
+}

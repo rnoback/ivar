@@ -1,0 +1,23 @@
+$breakpoint-sm          : 480px;
+$container-width-sm     : 456px;
+
+$breakpoint-md          : 768px;
+$container-width-md     : 720px;
+
+$breakpoint-lg          : 992px;
+$container-width-lg     : 960px;
+
+$breakpoint-xl          : 1280px;
+$container-width-xl     : 1200px;
+
+$container-content-width-xl: 1020px;
+
+$screen-sm-min      : $breakpoint-sm;
+$screen-md-min      : $breakpoint-md;
+$screen-lg-min      : $breakpoint-lg;
+$screen-xl-min      : $breakpoint-xl;
+
+$screen-xs-max      : ($breakpoint-sm - 1);
+$screen-sm-max      : ($breakpoint-md - 1);
+$screen-md-max      : ($breakpoint-lg - 1);
+$screen-lg-max      : ($breakpoint-xl - 1);

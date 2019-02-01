@@ -1,0 +1,3 @@
+@mixin awlgrip-gradient($direction) {
+	background-image: linear-gradient($direction, $colour-primary-1, rgba($colour-primary-2, 0.9))
+}

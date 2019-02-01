@@ -1,0 +1,18 @@
+/*
+ * clearfix
+ * 
+ * Creates the clearfix ::after styling.
+ *
+ * The clearfix forces an element to self-clear it's children.
+ * For more information and history, 
+ * read https://css-tricks.com/snippets/css/clear-fix/
+ *
+ * @include clearfix();
+ */
+ @mixin clearfix() {
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}

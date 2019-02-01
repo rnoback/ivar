@@ -1,0 +1,97 @@
+/*
+ * vertical rhythm
+ *
+ * - mixin make-vr-rhythm-classes
+ * - function get-vr-rhythm
+ */
+
+/*
+ * make-vr-rhythm-classes
+ *
+ * Creates the vertical rhythm classes based on $vr-sizes and given classname.
+ *
+ * @include make-vr-rhythm-classes('vr','line-height');
+ */
+@mixin make-vr-rhythm-classes($sClassName, $cssProperties: ())
+{
+	@each $vrValue in map-keys($vr-sizes)
+	{
+		.#{$sClassName}-#{$vrValue}
+		{
+			//loop thru the properties
+			@each $cssProperty in $cssProperties
+			{
+				#{$cssProperty}: map-get($vr-sizes-xs, $vrValue);
+			}
+
+			@media (min-width: map_get($grid-breakpoints, "md"))
+			{
+				//loop thru the properties again
+				@each $cssProperty in $cssProperties
+				{
+					#{$cssProperty}: map-get($vr-sizes, $vrValue);
+				}
+			}
+		}
+	}
+}
+
+/**
+	Generates an vert rythm for the provided attributes
+	input can be "margin-top" or ("margin-top", "margin-bottom") and the vr-rythm value
+	for example.
+ */
+@mixin vr-rhythm($sAttribute, $iValue: 0) {
+	@if type-of($sAttribute) == "string" {
+		#{$sAttribute}: map-get($vr-sizes-xs, $iValue);
+
+		@include media-breakpoint-up("lg")
+		{
+			#{$sAttribute}: map-get($vr-sizes, $iValue);
+		}
+	} @else {
+		@each $cssProperty, $iVRvalue in $sAttribute
+		{
+			//if a key has a vr value then use that
+			@if type-of($iVRvalue) == "number" {
+				#{$cssProperty}: map-get($vr-sizes-xs, $iVRvalue);
+			}  @else {
+				#{$cssProperty}: map-get($vr-sizes-xs, $iValue);
+			}
+		}
+
+		@include media-breakpoint-up("lg")
+		{
+			@each $cssProperty, $iVRvalue in $sAttribute
+			{
+				//if a key has a vr value then use that
+				@if type-of($iVRvalue) == "number" {
+					#{$cssProperty}: map-get($vr-sizes, $iVRvalue);
+				}  @else {
+					#{$cssProperty}: map-get($vr-sizes, $iValue);
+				}
+			}
+		}
+	}
+}
+
+/*
+ * get-vr-rhythm
+ *
+ * Returns the vertical rhythm for the given index.
+ *
+ * padding: get-vr-rhythm(1);
+ */
+@function get-vr-rhythm($index) {
+	@return map-get($vr-sizes, $index);
+}
+
+/* get-vr-rhythm-xs
+ *
+ * Returns the vertical rhythm for the given index (mobile)
+ *
+ * padding: get-vr-rhythm(1);
+ */
+@function get-vr-rhythm-xs($index) {
+	@return map-get($vr-sizes-xs, $index);
+}
