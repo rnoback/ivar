@@ -59,14 +59,21 @@
 	.menu-item {
 		display: block;
 		width: 100%;
-		border-bottom: 1px dotted $color-white;
+		//border-bottom: 1px dotted $color-white;
 
 		a {
 			//padding: 0;
 			@include font-bold();
 			display: inline-block;
 		}
+
+		&.current-menu-item {
+			a {
+				color: $color-primary-1;
+			}
+		}
 	}
+
 
 	@include media-breakpoint-up(md) {
 		position: relative;

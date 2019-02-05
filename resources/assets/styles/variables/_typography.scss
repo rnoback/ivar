@@ -6,21 +6,20 @@ $fw-semibold    : 600;
 $fw-bold        : 700;
 $fw-extrabold   : 800;
 
-$font-primary-1	: 'Open Sans', sans-serif !default;
-$font-fallback	: 'Arial', sans-serif !default;
+$font-primary-1	: 'Lato', sans-serif;
+$font-primary-2	: 'Lato', sans-serif;
+$font-fallback	: 'Arial', sans-serif;
 $font-main: $font-primary-1, $font-fallback;
-
-
 
 $font-sizes: (
 	homepage: 3.0rem,
-	h1: 2.2rem, 
+	h1: 2.2rem,
 	h2: 2.2rem,
-	h3: 2.0rem, 
+	h3: 2.0rem,
 	h4: 1.8rem,
-	h5: 1.6rem, 
+	h5: 1.6rem,
 	plarge: 1.6rem,
-	p: 1.4rem, 
+	p: 1.4rem,
 	psmall: 1.4rem,
 	pxsmall: 1.2rem
 
@@ -28,117 +27,117 @@ $font-sizes: (
 
 $line-heights: (
 	homepage: 4.0rem,
-	h1: 3.0rem, 
+	h1: 3.0rem,
 	h2: 3.0rem,
-	h3: 2.8rem, 
+	h3: 2.8rem,
 	h4: 2.4rem,
-	h5: 2.6rem, 
+	h5: 2.6rem,
 	plarge: 2.6rem,
-	p: 2.2rem, 
+	p: 2.2rem,
 	psmall: 2.2rem,
 	pxsmall: 2.0rem
 );
 
 $font-sizes-sm: (
 	homepage: 3.0rem,
-	h1: 2.6rem, 
+	h1: 2.6rem,
 	h2: 2.6rem,
-	h3: 2.2rem, 
+	h3: 2.2rem,
 	h4: 2.0rem,
-	h5: 1.6rem, 
+	h5: 1.6rem,
 	plarge: 1.6rem,
-	p: 1.6rem, 
+	p: 1.6rem,
 	psmall: 1.4rem,
 	pxsmall: 1.2rem
 );
 
 $line-heights-sm: (
 	homepage: 4.0rem,
-	h1: 3.6rem, 
+	h1: 3.6rem,
 	h2: 3.6rem,
-	h3: 3.2rem, 
+	h3: 3.2rem,
 	h4: 3.0rem,
-	h5: 2.6rem, 
+	h5: 2.6rem,
 	plarge: 2.6rem,
-	p: 2.6rem, 
+	p: 2.6rem,
 	psmall: 2.2rem,
 	pxsmall: 2.0rem
 );
 
 $font-sizes-md: (
 	homepage: 3.0rem,
-	h1: 3.6rem, 
+	h1: 3.6rem,
 	h2: 3.0rem,
-	h3: 2.8rem, 
+	h3: 2.8rem,
 	h4: 2.2rem,
-	h5: 1.6rem, 
+	h5: 1.6rem,
 	plarge: 1.8rem,
-	p: 1.8rem, 
+	p: 1.8rem,
 	psmall: 1.6rem,
 	pxsmall: 1.4rem
 );
 
 $line-heights-md: (
 	homepage: 4.0rem,
-	h1: 4.6rem, 
+	h1: 4.6rem,
 	h2: 4.0rem,
-	h3: 3.8rem, 
+	h3: 3.8rem,
 	h4: 3.2rem,
-	h5: 2.6rem, 
+	h5: 2.6rem,
 	plarge: 2.8rem,
-	p: 2.8rem, 
+	p: 2.8rem,
 	psmall: 2.4rem,
 	pxsmall: 2.2rem
 );
 
 $font-sizes-lg: (
 	homepage: 4.4rem,
-	h1: 3.6rem, 
+	h1: 3.6rem,
 	h2: 3.0rem,
-	h3: 2.8rem, 
+	h3: 2.8rem,
 	h4: 2.2rem,
-	h5: 1.8rem, 
+	h5: 1.8rem,
 	plarge: 2.0rem,
-	p: 1.8rem, 
+	p: 1.8rem,
 	psmall: 1.6rem,
 	pxsmall: 1.4rem
 );
 
 $line-heights-lg: (
 	homepage: 5.4rem,
-	h1: 4.6rem, 
+	h1: 4.6rem,
 	h2: 4.0rem,
-	h3: 3.8rem, 
+	h3: 3.8rem,
 	h4: 3.2rem,
-	h5: 2.8rem, 
+	h5: 2.8rem,
 	plarge: 3.0rem,
-	p: 2.8rem, 
+	p: 2.8rem,
 	psmall: 2.4rem,
 	pxsmall: 2.2rem
 );
 
 $font-sizes-xl: (
 	homepage: 5.6rem,
-	h1: 4.8rem, 
+	h1: 4.8rem,
 	h2: 3.0rem,
-	h3: 2.8rem, 
+	h3: 2.8rem,
 	h4: 2.2rem,
-	h5: 2.0rem, 
+	h5: 2.0rem,
 	plarge: 2.0rem,
-	p: 1.8rem, 
+	p: 1.8rem,
 	psmall: 1.6rem,
 	pxsmall: 1.4rem
 );
 
 $line-heights-xl: (
 	homepage: 6.6rem,
-	h1: 5.8rem, 
+	h1: 5.8rem,
 	h2: 4.0rem,
-	h3: 3.6rem, 
+	h3: 3.6rem,
 	h4: 3.2rem,
-	h5: 3.0rem, 
+	h5: 3.0rem,
 	plarge: 3.0rem,
-	p: 2.8rem, 
+	p: 2.8rem,
 	psmall: 2.6rem,
 	pxsmall: 2.4rem
 );

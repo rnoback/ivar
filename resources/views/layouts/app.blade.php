@@ -7,11 +7,6 @@
 	<div class="bg-image"></div>
     <div class="wrap container" role="document">
       <div class="content">
-		  <!-- Facebook icon -->
-	<i class="fab fa-facebook"></i>
-	<!-- Twitter icon -->
-	<i class="fab fa-twitter"></i>
-	<i class="fas fa-arrow-alt-circle-right"></i>
         <main class="main">
           @yield('content')
         </main>

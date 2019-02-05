@@ -1,19 +1,19 @@
-@font-face {
-	font-family: "lato";
-	src: url("25C51C_3_0.eot"); /* IE9 Compat Modes */
-	src: url("25C51C_3_0.eot?#iefix") format("embedded-opentype"), url("25C51C_3_0.woff") format("woff"), url("25C51C_3_0.ttf") format("truetype");
-	font-weight: normal;
-}
-
-@font-face {
-	font-family: "gotham";
-	src: url("25C50E_0_0.eot"); /* IE9 Compat Modes */
-	src: url("25C50E_0_0.eot?#iefix") format("embedded-opentype"), url("25C50E_0_0.woff") format("woff"), url("25C50E_0_0.ttf") format("truetype");
-	font-weight: normal;
-}
+// @font-face {
+// 	font-family: "lato";
+// 	src: url("25C51C_3_0.eot"); /* IE9 Compat Modes */
+// 	src: url("25C51C_3_0.eot?#iefix") format("embedded-opentype"), url("25C51C_3_0.woff") format("woff"), url("25C51C_3_0.ttf") format("truetype");
+// 	font-weight: normal;
+// }
+//
+// @font-face {
+// 	font-family: "gotham";
+// 	src: url("25C50E_0_0.eot"); /* IE9 Compat Modes */
+// 	src: url("25C50E_0_0.eot?#iefix") format("embedded-opentype"), url("25C50E_0_0.woff") format("woff"), url("25C50E_0_0.ttf") format("truetype");
+// 	font-weight: normal;
+// }
 
 body {
-	font-family: "lato", sans-serif;
+	font-family: "Rubik", sans-serif;
 	color: $color-white;
 
 	.container {
