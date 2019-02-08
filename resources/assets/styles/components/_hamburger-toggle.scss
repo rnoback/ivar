@@ -11,7 +11,7 @@ $bar-spacing: 10px;
 	//margin: 16px 0 16px 0;
 
 
-	@include media-breakpoint-up(md) {
+	@include media-breakpoint-up(sm) {
 		display: none;
 	}
 }

@@ -1,3 +1,21 @@
 .container {
 	color: $white;
 }
+
+
+.template-home {
+
+	main {
+		position: relative;
+		height: calc(100vh - 5rem);
+	}
+
+	.page-mega-header{
+		position: absolute;
+		@include vertical-align();
+
+		h1 {
+			@include font-size('homepage');
+		}
+	}
+}

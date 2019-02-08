@@ -15,6 +15,7 @@
 /** Import theme styles */
 @import "common/global";
 @import "mixins/__mixins";
+@import "common/typography";
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";
@@ -23,6 +24,7 @@
 @import "layouts/header";
 @import "components/nav";
 @import "components/hamburger-toggle";
+@import "components/list";
 @import "layouts/sidebar";
 @import "layouts/footer";
 @import "layouts/pages";

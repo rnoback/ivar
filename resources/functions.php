@@ -7,6 +7,16 @@
 use Roots\Sage\Config;
 use Roots\Sage\Container;
 
+// Workaround, we need to use ACF sub items here. We dont want hardcoded ID's
+// See: https://www.advancedcustomfields.com/resources/group/
+function returnAfcId() {
+  global $socialAcfID;
+  $socialAcfID = 94;
+  return $socialAcfID;
+}
+
+
+
 /**
  * Helper function for prettying up errors
  * @param string $message

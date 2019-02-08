@@ -6,14 +6,23 @@
 
 @section('content')
   @while(have_posts()) @php the_post() @endphp
-    @include('partials.page-header')
-    @include('partials.content-page')
+	<div class="page-mega-header">
+		<div class="row">
+			<div class="col-11 col-sm-10 col-md-8">
+    		@include('partials.page-header', [
+				'layoutClass' => 'page-header--homepage',
+				'headerClass' => 'homepage'
+			])
+			@include('partials.content-page')
+			@include('partials.social-media')
+			</div>
+		</div>
+	</div>
 
-<i class="fab fa-facebook"></i>
-<i class="fab fa-youtube"></i>
-<i class="fab fa-instagram"></i>
-<i class="fab fa-linkedin"></i>
-<i class="far fa-envelope"></i>
+
+
 
   @endwhile
+
+
 @endsection

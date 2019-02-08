@@ -1,3 +1,3 @@
-<div class="page-header">
-  <h1>{!! App::title() !!}</h1>
+<div class="page-header {{$layoutClass}}">
+  <h1 class="{{$headerClass}}">{!! App::title() !!}</h1>
 </div>
