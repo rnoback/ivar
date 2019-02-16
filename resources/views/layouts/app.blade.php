@@ -7,7 +7,7 @@
 	<div class="bg-image"></div>
     <div class="wrap container" role="document">
       <div class="content">
-        <main class="main">
+        <main class="main section-vr-t">
           @yield('content')
         </main>
         @if (App\display_sidebar())

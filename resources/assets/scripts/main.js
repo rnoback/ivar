@@ -14,12 +14,12 @@ import aboutUs from './routes/about';
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 // import the Facebook and Twitter icons
 import { faFacebook, faInstagram, faYoutube, faLinkedin, faVimeoV } from '@fortawesome/free-brands-svg-icons';
-
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faCamera, faVideo } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faArrowAltCircleRight } from '@fortawesome/free-regular-svg-icons';
 
 
 // add the imported icons to the library
-library.add(faFacebook, faInstagram, faYoutube, faLinkedin, faVimeoV, faEnvelope);
+library.add(faFacebook, faInstagram, faYoutube, faLinkedin, faVimeoV, faEnvelope, faArrowAltCircleRight, faCamera, faVideo);
 
 // tell FontAwesome to watch the DOM and add the SVGs when it detects icon markup
 dom.watch();

@@ -1,4 +1,4 @@
-<header class="banner js-banner">
+<header class="banner js-banner" data-enhancer="Navigation">
 		<div class="container">
 
 		    {{-- <a class="brand" href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a> --}}

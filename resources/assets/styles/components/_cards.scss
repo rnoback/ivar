@@ -1,1 +1,110 @@
 /** cards */
+
+.card-container {
+	margin-bottom: 2rem;
+	height: auto;
+}
+
+.card {
+	position: static;
+    width: 100%;
+    height: 100%;
+	border: none;
+	//border-radius: $radius;
+	margin-bottom: 0;
+	background: transparent;
+	overflow: hidden;
+	box-shadow: $box-shadow-bar;
+	color: $color-white;
+	text-decoration: none;
+
+	&__image {
+		width: 100%;
+		height: 200px;
+		background-size: cover;
+		background-position: center center;
+		@include border-top-radius($radius);
+
+
+		transition: $easeOutQuart;
+		transform: scale(1);
+
+
+
+		@include media-breakpoint-up(md) {
+			height: 190px;
+		}
+	}
+
+	&__content-type {
+		position: absolute;
+		left: 3rem;
+		top: 160px;
+
+		@include media-breakpoint-up(md) {
+			top: 150px;
+		}
+	}
+
+	&__content {
+		position: relative;
+		height: calc(100% - 200px);
+		overflow: hidden;
+
+		&:after {
+			content:' ';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-color: $color-black;
+			//background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6));
+			opacity: 1;
+			z-index: 1;
+			@include border-bottom-radius($radius);
+		}
+
+		&__title {
+			position: relative;
+			color: $color-white;
+			@include font-bold();
+			padding: 1.5rem 4.8rem .25rem 2rem;
+			margin:0;
+			z-index: 2;
+		}
+		p {
+			padding: 0 4.8rem 1.5rem 2rem;
+			color: $color-white;
+			position: relative;
+			z-index: 2;
+		}
+
+		.icon {
+			position: absolute;
+			right: 1rem;
+			bottom: 1rem;
+			width: 2.8rem;
+			height: 2.8rem;
+			z-index: 2;
+			box-shadow: $box-shadow-bar;
+		}
+
+		@include media-breakpoint-up(md) {
+			height: calc(100% - 180px);
+		}
+	}
+
+	&:hover {
+		text-decoration: none;
+		color: $color-white;
+
+		.card__image {
+			transform: scale(1.1);
+		}
+	}
+
+	&:hover .icon-arrow-right{
+		color: $color-primary-1;
+	}
+}

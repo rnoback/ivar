@@ -29,4 +29,10 @@ $vr-sizes-xs: (
 	11: 5rem // margin between components
 ) !default;
 
-// page layout component marges desktop: 8rem, mobile: 5rem
+.section-vr-t {
+	margin-top: 8rem;
+}
+
+.section-vr-b {
+	margin-bottom: 8rem;
+}

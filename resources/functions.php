@@ -100,3 +100,15 @@ Container::getInstance()
             'view' => require dirname(__DIR__).'/config/view.php',
         ]);
     }, true);
+
+
+// Add featured image sizes
+add_image_size( 'featured-large', 640, 294, true ); // width, height, crop
+add_image_size( 'featured-medium', 600, 400, true ); // width, height, crop
+add_image_size( 'featured-small', 320, 147, true );
+
+// Except length
+function wpdocs_custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );

@@ -16,6 +16,7 @@
 
 		h1 {
 			@include font-size('homepage');
+			@include vr-rhythm('margin-bottom', 1);
 		}
 	}
 }

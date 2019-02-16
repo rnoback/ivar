@@ -34,13 +34,13 @@
 
 
 	@include media-breakpoint-up(sm) {
-		position: relative;
+		position: fixed;
 		height: 5rem;
 
 		.container {
 			display: flex;
 			flex-direction: row;
-			justify-content: space-between;
+			justify-content: flex-end;
 			align-items: center;
 		}
 	}
@@ -64,6 +64,12 @@
 			padding: 1.5rem;
 			@include font-bold();
 			display: inline-block;
+			color: $color-white;
+			text-decoration: none;
+
+			&:hover {
+				color: $color-primary-1;
+			}
 		}
 
 		&.current-menu-item {
@@ -90,9 +96,9 @@
 				padding: 1.5rem;
 			}
 
-			&:first-child {
+			&:last-child {
 				a{
-					padding-left: 0;
+					margin-right: 0;
 				}
 			}
 		}
