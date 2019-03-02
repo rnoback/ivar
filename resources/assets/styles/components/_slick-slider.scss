@@ -1,5 +1,5 @@
 .wpsisac-slick-slider-wrp {
-	box-shadow: $box-shadow-bar;
+	//box-shadow: $box-shadow-bar;
 }
 
 
@@ -22,5 +22,25 @@
 
 	.slider-readmore {
 		display: none;
+	}
+}
+
+.slide-wrap {
+	height: auto;
+	width: 100%;
+	img {
+		height: auto;
+		max-height: 500px;
+		width: 100% !important;
+	}
+
+	@include media-breakpoint-up(md) {
+		height: 500px;
+		width: 100%;
+		img {
+			height: auto;
+			max-height: 100%;
+			width: auto !important;
+		}
 	}
 }

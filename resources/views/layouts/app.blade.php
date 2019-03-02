@@ -5,7 +5,7 @@
     @php do_action('get_header') @endphp
     @include('partials.header')
 	<?php
-		$image = get_field('background_image');
+		$image = get_field('background-image');
 		if( !empty($image) ): ?>
 		<div class="bg-image" style="background-image: url(<?php echo $image; ?>);"></div>
 		<?php endif; ?>

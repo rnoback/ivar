@@ -15,6 +15,29 @@ export default {
 			eBanner.classList.toggle('is-visible');
 		});
 	}
+
+
+	if ($('.royalSlider').length){
+		$('.royalSlider').css('display','block').royalSlider({
+			// options go here
+			// as an example, enable keyboard arrows nav
+			keyboardNavEnabled: true,
+			imageScaleMode: 'fit',
+			fitInViewport: true,
+			arrowsNav: true,
+			//imgWidth: 1024,
+			//imgHeight: 550,
+			//autoScaleSlider: true,
+			autoScaleSliderWidth: 1024,
+			autoScaleSliderHeight: 687,
+			imageScalePadding: 0,
+			globalCaption: false,
+			loop: true,
+		});
+	}
+
+
+
   },
 
   finalize() {
