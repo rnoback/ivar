@@ -13,8 +13,8 @@
 
 .vr-section {
 	@include vr-rhythm('margin-bottom', 11);
-} 
+}
 
 .vr-section-top {
-	@include vr-rhythm('margin-top', 11);
+	@include vr-rhythm('margin-top', 8);
 }

@@ -25,11 +25,8 @@
 		background-position: center center;
 		@include border-top-radius($radius);
 
-
 		transition: $easeOutQuart;
 		transform: scale(1);
-
-
 
 		@include media-breakpoint-up(md) {
 			height: 190px;
@@ -40,6 +37,7 @@
 		position: absolute;
 		left: 3rem;
 		top: 160px;
+		transition: $easeInOutQuart;
 
 		@include media-breakpoint-up(md) {
 			top: 150px;
@@ -50,6 +48,7 @@
 		position: relative;
 		height: calc(100% - 200px);
 		overflow: hidden;
+		color: $color-gray-3;
 
 		&:after {
 			content:' ';
@@ -58,7 +57,7 @@
 			height: 100%;
 			top: 0;
 			left: 0;
-			background-color: $color-black;
+			background-color: $color-gray-6;
 			//background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6));
 			opacity: 1;
 			z-index: 1;
@@ -67,17 +66,18 @@
 
 		&__title {
 			position: relative;
-			color: $color-white;
-			@include font-bold();
+			color: $text-color;
+			@include font-extrabold();
 			padding: 1.5rem 4.8rem .25rem 2rem;
 			margin:0;
 			z-index: 2;
 		}
 		p {
 			padding: 0 4.8rem 1.5rem 2rem;
-			color: $color-white;
+			color: $text-color;
 			position: relative;
 			z-index: 2;
+			@include font-size(psmall);
 		}
 
 		.icon {
@@ -87,7 +87,7 @@
 			width: 2.8rem;
 			height: 2.8rem;
 			z-index: 2;
-			box-shadow: $box-shadow-bar;
+			//box-shadow: $box-shadow-bar;
 		}
 
 		@include media-breakpoint-up(md) {
@@ -99,8 +99,11 @@
 		text-decoration: none;
 		color: $color-white;
 
-		.card__image {
+		.card__image{
 			transform: scale(1.1);
+		}
+		.card__content-type  {
+			transform: scale(1.25);
 		}
 	}
 

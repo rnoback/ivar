@@ -4,7 +4,12 @@
   <body @php body_class() @endphp>
     @php do_action('get_header') @endphp
     @include('partials.header')
-	<div class="bg-image"></div>
+	<?php
+		$image = get_field('background_image');
+		if( !empty($image) ): ?>
+		<div class="bg-image" style="background-image: url(<?php echo $image; ?>);"></div>
+		<?php endif; ?>
+
     <div class="wrap container" role="document">
       <div class="content">
         <main class="main section-vr-t">

@@ -3,13 +3,13 @@
 	<div class="card__content-type">
 		@if ($cardType == "photo" )
 		<i class="fas fa-camera fa-lg icon icon-photo"></i>
-	@elseif ($cardType == "video" )
+		@elseif ($cardType == "video" )
 		<i class="fas fa-video fa-lg icon icon-video"></i>
 		@endif
 	</div>
 
 	<div class="card__content">
-		<h4 class="card__content__title">@php  the_title() @endphp</h4>
+		<h5 class="card__content__title">@php  the_title() @endphp</h5>
 		@php the_excerpt() @endphp
 
 		<i class="far fa-arrow-alt-circle-right fa-lg icon icon-arrow-right"></i>

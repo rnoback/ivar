@@ -1,3 +1,26 @@
 .wpsisac-slick-slider-wrp {
 	box-shadow: $box-shadow-bar;
 }
+
+
+.wpsisac-slick-slider.design-3 .slick-image-slide .slide-wrap .slider-content {
+	top: auto;
+	bottom: 0;
+	padding: 0;
+	position: relative;
+
+	.bg-overlay {
+		width: 100%;
+	}
+
+	.slide-title {
+		@include font-size(p);
+	}
+	.slick-slider-short-content {
+		@include font-size(psmall);
+	}
+
+	.slider-readmore {
+		display: none;
+	}
+}

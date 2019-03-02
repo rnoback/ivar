@@ -11,7 +11,7 @@
 	@include('partials.page-header', [
 		'layoutClass' => 'page-header',
 		'headerClass' => 'page-title'
-	]);
+	])
 	<?php
 	wp_reset_postdata();
 	?>
@@ -22,7 +22,16 @@
 
 <!--Child Page Thumbnails Start-->
 <?php
+
+//$title = $post->the_title
+
+$titleStr = get_the_title( $post );
+
+$titleStr = strtolower($titleStr);
+
 $subs = new WP_Query( array( 'post_parent' => $post->ID, 'post_type' => 'page', 'meta_key' => '_thumbnail_id' ));
+
+
 
 if( $subs->have_posts() ) : while( $subs->have_posts() ) : $subs->the_post();
 ?>
@@ -31,7 +40,7 @@ if( $subs->have_posts() ) : while( $subs->have_posts() ) : $subs->the_post();
 	if ( has_post_thumbnail( $_post->ID ) ) {
 	?>
 
-	@include('partials.card', ['cardType'=>'photo', 'cardTypeClass' => 'card--type-a'])	
+	@include('partials.card', ['cardType'=> $titleStr, 'cardTypeClass' => 'card--type-a'])
 
 	<?php
 	}
@@ -43,13 +52,15 @@ if( $subs->have_posts() ) : while( $subs->have_posts() ) : $subs->the_post();
 	<!--Child Page Thumbnails End-->
 
 </div>
-
+{{--
 <ul>
 	@wpquery( array( 'post_type' => 'post' ) )
 	        <li><a href="{{ the_permalink() }}">{{ the_title() }}</a></li>
 	@wpempty
 	        <li>{{ __( 'Sorry, no posts matched your criteria.' ) }}</li>
 	@wpend
-</ul>
+</ul> --}}
+
+
 
 @endsection

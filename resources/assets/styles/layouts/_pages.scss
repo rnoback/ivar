@@ -1,7 +1,12 @@
 .container {
-	color: $white;
-}
+	color: $text-color;
 
+	.main {
+	//	padding-top: 5rem;
+		//@include vr-rhythm(('padding-top': 10, 'padding-bottom': 9));
+		@include vr-rhythm('padding-top', 8);
+	}
+}
 
 .template-home {
 

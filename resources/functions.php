@@ -87,6 +87,7 @@ array_map(function ($file) use ($sage_error) {
  * ├── STYLESHEETPATH         -> /srv/www/example.com/current/web/app/themes/sage/resources/views
  * └── TEMPLATEPATH           -> /srv/www/example.com/current/web/app/themes/sage/resources
  */
+
 array_map(
     'add_filter',
     ['theme_file_path', 'theme_file_uri', 'parent_theme_file_path', 'parent_theme_file_uri'],
@@ -112,3 +113,70 @@ function wpdocs_custom_excerpt_length( $length ) {
     return 20;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+/**
+ *
+ * Codestar Framework
+ * A Simple and Lightweight WordPress Option Framework for Themes and Plugins
+ *
+ */
+//
+// require_once get_theme_file_path() .'../options/codestar-framework.php';
+//
+//
+//
+// // Control core classes for avoid errors
+// if( class_exists( 'CSF' ) ) {
+//
+//   //
+//   // Set a unique slug-like ID
+//   $prefix = 'ivar__options';
+//
+//   //
+//   // Create options
+//   CSF::createOptions( $prefix, array(
+//     'menu_title' => 'Theme Options',
+//     'menu_slug'  => 'theme-options',
+//   ) );
+//
+//   //
+//   // Create a section
+//   CSF::createSection( $prefix, array(
+//     'title'  => 'Genral',
+//     'fields' => array(
+//
+//       //
+//       // A text field
+//       array(
+//         'id'    => 'opt-text',
+//         'type'  => 'text',
+//         'title' => 'Simple Text',
+//       ),
+// 	  //
+//       // A text field
+//       array(
+//         'id'    => 'opt-radio',
+//         'type'  => 'radio',
+//         'title' => 'Simple Radio button',
+//       ),
+//
+//     )
+//   ) );
+//
+//   //
+//   // Create a section
+//   CSF::createSection( $prefix, array(
+//     'title'  => 'Tab Title 2',
+//     'fields' => array(
+//
+//       // A textarea field
+//       array(
+//         'id'    => 'opt-textarea',
+//         'type'  => 'textarea',
+//         'title' => 'Simple Textarea',
+//       ),
+//
+//     )
+//   ) );
+//
+// }
