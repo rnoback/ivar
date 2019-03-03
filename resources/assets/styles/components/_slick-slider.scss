@@ -1,46 +1,107 @@
-.wpsisac-slick-slider-wrp {
-	//box-shadow: $box-shadow-bar;
-}
+.slick-slider {
+	margin-top: 4rem;
 
-
-.wpsisac-slick-slider.design-3 .slick-image-slide .slide-wrap .slider-content {
-	top: auto;
-	bottom: 0;
-	padding: 0;
-	position: relative;
-
-	.bg-overlay {
-		width: 100%;
+	.slick-slide {
+		//margin: 0 1rem;
+		outline: none;
 	}
 
-	.slide-title {
-		@include font-size(p);
-	}
-	.slick-slider-short-content {
-		@include font-size(psmall);
-	}
+	.slick-arrow {
 
-	.slider-readmore {
-		display: none;
-	}
-}
+		&:before {
+			color: $color-gray-1;
+			opacity: 1;
+		}
 
-.slide-wrap {
-	height: auto;
-	width: 100%;
-	img {
-		height: auto;
-		max-height: 500px;
-		width: 100% !important;
-	}
-
-	@include media-breakpoint-up(md) {
-		height: 500px;
-		width: 100%;
-		img {
-			height: auto;
-			max-height: 100%;
-			width: auto !important;
+		&:hover {
+			.slick-arrow{
+				&:before {
+					color: $color-primary-1 !important;
+				}
+			}
 		}
 	}
+
+	.slick-prev, .slick-next {
+
+		top: -1.6rem;
+
+	}
+	.slick-prev {
+		left: 0;
+	}
+
+	.slick-next {
+		left: 30px;
+	}
+
+	.slick-slide {
+		//max-height: 200px;
+	}
+	figure img {
+		max-height: 500px;
+	}
 }
+
+// .royalSlider .rsOverflow {
+// 	width: 100% !important;
+//
+// }
+// .rsDefaultInv, .rsDefaultInv .rsOverflow, .rsDefaultInv .rsSlide, .rsDefaultInv .rsVideoFrameHolder, .rsDefaultInv .rsThumbs {
+// 	background: none !important;
+// }
+//
+// .royalSlider .rsContent {
+// 	display: flex;
+// 	justify-content: flex-start;
+// 	img {
+// 		margin-left: initial !important;
+// 	}
+// }
+
+// .wpsisac-slick-slider-wrp {
+// 	//box-shadow: $box-shadow-bar;
+// }
+//
+//
+// .wpsisac-slick-slider.design-3 .slick-image-slide .slide-wrap .slider-content {
+// 	top: auto;
+// 	bottom: 0;
+// 	padding: 0;
+// 	position: relative;
+//
+// 	.bg-overlay {
+// 		width: 100%;
+// 	}
+//
+// 	.slide-title {
+// 		@include font-size(p);
+// 	}
+// 	.slick-slider-short-content {
+// 		@include font-size(psmall);
+// 	}
+//
+// 	.slider-readmore {
+// 		display: none;
+// 	}
+// }
+//
+// .slide-wrap {
+// 	height: auto;
+// 	width: 100%;
+// 	img {
+// 		height: auto;
+// 		max-height: 500px;
+// 		width: 100% !important;
+// 	}
+//
+// 	@include media-breakpoint-up(md) {
+// 		height: 500px;
+// 		width: 100%;
+// 		img {
+// 			height: auto;
+// 			max-height: 100%;
+// 			width: auto !important;
+// 		}
+// 	}
+// }

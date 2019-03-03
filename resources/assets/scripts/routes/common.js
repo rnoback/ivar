@@ -16,25 +16,41 @@ export default {
 		});
 	}
 
+	$('.js-slick-slider').slick({
+		//slidesToShow: 3,
+		//slidesToScroll: 1,
+		//asNavFor: '.slider-for',
+		dots: true,
+		adaptiveHeight: true,
+		//centerMode: true,
+		//focusOnSelect: true,
+	});
 
-	if ($('.royalSlider').length){
-		$('.royalSlider').css('display','block').royalSlider({
-			// options go here
-			// as an example, enable keyboard arrows nav
-			keyboardNavEnabled: true,
-			imageScaleMode: 'fit',
-			fitInViewport: true,
-			arrowsNav: true,
-			//imgWidth: 1024,
-			//imgHeight: 550,
-			//autoScaleSlider: true,
-			autoScaleSliderWidth: 1024,
-			autoScaleSliderHeight: 687,
-			imageScalePadding: 0,
-			globalCaption: false,
-			loop: true,
-		});
-	}
+
+
+	// if ($('.royalSlider').length){
+	// 	$('.royalSlider').css('display','block').royalSlider({
+	// 		// options go here
+	// 		// as an example, enable keyboard arrows nav
+	// 		keyboardNavEnabled: true,
+	// 		imageScaleMode: 'fit',
+	// 		// controlNavigation: 'none',
+	// 		fitInViewport: true,
+	// 		arrowsNav: false,
+	// 		//imgWidth: 100,
+	// 		//imgHeight: 500,
+	// 		//autoScaleSlider: false,
+	// 		//autoScaleSliderWidth: '100%',
+	// 		//autoScaleSliderHeight: 500,
+	// 		// imageScalePadding: 0,
+	// 		// globalCaption: false,
+	// 		loop: true,
+	//
+	// 	});
+	//
+	//
+	// }
+	// console.log('PAaRD', $('.royalSlider'));
 
 
 
