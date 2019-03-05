@@ -25,5 +25,7 @@
     @php do_action('get_footer') @endphp
     @include('partials.footer')
     @php wp_footer() @endphp
+	<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.2.0/jquery.fitvids.min.js'></script>
+	{{-- <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/reframe.js/2.2.5/reframe.min.js'></script>	 --}}
   </body>
 </html>

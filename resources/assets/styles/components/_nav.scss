@@ -72,7 +72,8 @@
 			}
 		}
 
-		&.current-menu-item {
+		&.current-menu-item,
+		&.current-page-ancestor {
 			a {
 				color: $color-primary-1;
 			}

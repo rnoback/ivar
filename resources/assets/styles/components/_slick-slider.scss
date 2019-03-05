@@ -1,5 +1,14 @@
+.wp-block-gallery {
+	display: none;
+}
+
+
+.slick-initialized {
+	display: block;
+}
 .slick-slider {
 	margin-top: 4rem;
+	//display: none;
 
 	.slick-slide {
 		//margin: 0 1rem;
@@ -35,73 +44,28 @@
 		left: 30px;
 	}
 
-	.slick-slide {
-		//max-height: 200px;
+	.slick-dots {
+		position: relative;
+		bottom: 0;
 	}
-	figure img {
-		max-height: 500px;
+	figure {
+		//max-height: 500px;
+		img {
+			max-height: 500px;
+		}
 	}
 }
+.wp-block-gallery .blocks-gallery-image figcaption,
+.wp-block-gallery .blocks-gallery-item figcaption {
 
-// .royalSlider .rsOverflow {
-// 	width: 100% !important;
-//
-// }
-// .rsDefaultInv, .rsDefaultInv .rsOverflow, .rsDefaultInv .rsSlide, .rsDefaultInv .rsVideoFrameHolder, .rsDefaultInv .rsThumbs {
-// 	background: none !important;
-// }
-//
-// .royalSlider .rsContent {
-// 	display: flex;
-// 	justify-content: flex-start;
-// 	img {
-// 		margin-left: initial !important;
-// 	}
-// }
+	@include font-size(pxsmall);
+	text-align: left;
+	width: auto;
+}
+// overwrite
+.wp-block-gallery.is-cropped .blocks-gallery-image a,
+.wp-block-gallery.is-cropped .blocks-gallery-image img,
+.wp-block-gallery.is-cropped .blocks-gallery-item a,
+.wp-block-gallery.is-cropped .blocks-gallery-item img {
 
-// .wpsisac-slick-slider-wrp {
-// 	//box-shadow: $box-shadow-bar;
-// }
-//
-//
-// .wpsisac-slick-slider.design-3 .slick-image-slide .slide-wrap .slider-content {
-// 	top: auto;
-// 	bottom: 0;
-// 	padding: 0;
-// 	position: relative;
-//
-// 	.bg-overlay {
-// 		width: 100%;
-// 	}
-//
-// 	.slide-title {
-// 		@include font-size(p);
-// 	}
-// 	.slick-slider-short-content {
-// 		@include font-size(psmall);
-// 	}
-//
-// 	.slider-readmore {
-// 		display: none;
-// 	}
-// }
-//
-// .slide-wrap {
-// 	height: auto;
-// 	width: 100%;
-// 	img {
-// 		height: auto;
-// 		max-height: 500px;
-// 		width: 100% !important;
-// 	}
-//
-// 	@include media-breakpoint-up(md) {
-// 		height: 500px;
-// 		width: 100%;
-// 		img {
-// 			height: auto;
-// 			max-height: 100%;
-// 			width: auto !important;
-// 		}
-// 	}
-// }
+}
