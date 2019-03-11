@@ -10,7 +10,7 @@
 
 	<div class="card__content">
 		<h5 class="card__content__title">@php  the_title() @endphp</h5>
-		@php the_excerpt() @endphp
+		@php the_content() @endphp
 
 		<i class="far fa-arrow-alt-circle-right fa-lg icon icon-arrow-right"></i>
 	</div>
