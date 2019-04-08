@@ -9,9 +9,8 @@
 	</div>
 
 	<div class="card__content">
-		<h5 class="card__content__title">@php  the_title() @endphp</h5>
-		@php the_content() @endphp
-
+		<h5 class="card__content__title">@php  the_title() @endphp </h5>
+		<p class="list-group-item-text"><?php echo get_the_excerpt() ?></p>
 		<i class="far fa-arrow-alt-circle-right fa-lg icon icon-arrow-right"></i>
 	</div>
 </a>

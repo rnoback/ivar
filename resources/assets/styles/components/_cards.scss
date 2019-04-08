@@ -93,6 +93,10 @@
 		@include media-breakpoint-up(md) {
 			height: calc(100% - 180px);
 		}
+
+		.wp-block-gallery, .slick-initialized {
+			display: none !important;
+		}
 	}
 
 	&:hover {

@@ -108,6 +108,13 @@ function wpdocs_custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
+function new_excerpt_more($more) {
+    global $post;
+    return '<span class="moretag" 
+    > ...</span>';
+   }
+   add_filter('excerpt_more', 'new_excerpt_more');
+
 /**
  *
  * Codestar Framework
